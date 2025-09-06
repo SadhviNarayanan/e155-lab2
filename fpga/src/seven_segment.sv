@@ -1,8 +1,8 @@
-// E155, Lab 1 Code to coutput a seven segment display based on hex values
+// E155, Lab 2 Code to output a seven segment display based on hex values
 
 // Name: Sadhvi Narayanan
 // Email: sanarayanan@g.hmc.edu
-// Date: 08/27/2025
+// Date: 09/05/2025
 
 
 // seven segment display module to convert a 4 bit hex into segments on a seven segment display
