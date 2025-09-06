@@ -26,7 +26,7 @@ Purpose : Generic application start
 int main(void) {
   // Initialization code
 
-  RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
+  RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN; 
 
   // Set PA6 and PA10 as an output
   GPIOA->MODER |=  (GPIO_MODER_MODE10_0);
