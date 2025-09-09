@@ -1,3 +1,4 @@
+
 // E155, Lab 2 - Testbench to test top level module - time multiplexing and led addition
 
 // Name: Sadhvi Narayanan
@@ -26,7 +27,7 @@ module testbench_lab2_sn();
 
 
   // instantiate device to be tested
-  lab2_sn dut(reset, s1, s2, led, enable_seg, seg);
+  lab2_sn dut(clk, reset, s1, s2, led, enable_seg, seg);
   
   // generate clock
 
@@ -37,8 +38,18 @@ module testbench_lab2_sn();
 
   initial
     begin
-      reset = 0; #22; reset = 1;
+      reset = 0; #22; reset = 1; 
     end
+
+  always
+    begin
+      #40000000;
+      assert (enable_seg === 2'b10) else $display("ERROR on enbable, should be 10 but actuall %b", enable_seg);
+      #40000000;
+      assert (enable_seg === 2'b01) else $display("ERROR on enbable, should be 01 but actuall %b", enable_seg);
+    end
+
+    
 
 
   always @(*) begin #2
@@ -92,4 +103,7 @@ module testbench_lab2_sn();
 
 
 endmodule
+
+
+
 
